@@ -27,5 +27,13 @@ public class Main {
         paul.pushCross(new LowerKick());
         paul.pushTrianlge(new UppercutPunch());
 
+        Duck mallard = new MallardDuck();
+        mallard.performQuack();
+        mallard.performFly();
+
+        Duck modelduck = new ModelDuck();
+        modelduck.performFly(); // Akan memanggil contructor modelduck(FlyNoway)
+        modelduck.setFlyBehavior((new FlyWithRocketPower()));
+        modelduck.performFly();
     }
 }

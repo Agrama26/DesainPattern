@@ -1,26 +1,77 @@
-interface Quackable {
+interface QuackBehavior {
     void quack();
 }
 
-interface Flyable {
+interface FlyBehavior {
     void fly();
 }
 
+class Quack implements  QuackBehavior {
+    @Override
+    public void quack() {
+        System.out.println("Qwek Qwek");
+    }
+}
+
+class Squeak implements QuackBehavior {
+    @Override
+    public void quack() {
+        System.out.println("Squeak");
+    }
+}
+
+class MuteQuack implements QuackBehavior {
+    @Override
+    public void quack() {
+        System.out.println("Tidak Bisa Bersuara");
+    }
+}
+
+class FlyWithWings implements FlyBehavior {
+    @Override
+    public void fly() {
+        System.out.println("Terbang");
+    }
+}
+
+class FlyNoWay implements FlyBehavior {
+    public void fly() {
+        System.out.println("Tidak bisa terbang");
+    }
+}
+
+class FlyWithRocketPower implements FlyBehavior {
+    @Override
+    public void fly() {
+        System.out.println("Cool, terbang menggunakan rocket");
+    }
+}
+
 abstract class Duck {
+    QuackBehavior quackBehavior;
+    FlyBehavior flyBehavior;
     abstract void display();
     void swim(){
         System.out.println("Berenang");
     }
+    void performQuack() {
+        quackBehavior.quack();
+    }
+    void performFly() {
+        flyBehavior.fly();
+    }
+    void setFlyBehavior(FlyBehavior fb) {
+        flyBehavior = fb;
+    }
+    void setQuackBehavior(QuackBehavior qb) {
+        quackBehavior = qb;
+    }
 }
 
-class MallardDuck extends Duck implements Quackable, Flyable {
-    @Override
-    public  void quack() {
-        System.out.println("Qwek Qwek");
-    }
-    @Override
-    public void fly() {
-        System.out.println("Terbang");
+class MallardDuck extends Duck {
+    public MallardDuck() {
+        quackBehavior = new Quack();
+        flyBehavior = new FlyWithWings();
     }
     @Override
     void display() {
@@ -28,14 +79,10 @@ class MallardDuck extends Duck implements Quackable, Flyable {
     }
 }
 
-class RedHeadDuck extends Duck implements Quackable, Flyable {
-    @Override
-    public void quack() {
-        System.out.println("Qwek Qwek");
-    }
-    @Override
-    public void fly() {
-        System.out.println("Terbang");
+class RedHeadDuck extends Duck {
+    public RedHeadDuck() {
+        quackBehavior = new Quack();
+        flyBehavior = new FlyWithWings();
     }
     @Override
     void display() {
@@ -43,10 +90,10 @@ class RedHeadDuck extends Duck implements Quackable, Flyable {
     }
 }
 
-class RubberDuck extends Duck implements Quackable {
-    @Override
-    public void quack() {
-        System.out.println("Squeak");
+class RubberDuck extends Duck {
+    public RubberDuck() {
+        quackBehavior = new Squeak();
+        flyBehavior = new FlyNoWay();
     }
     @Override
     void display() {
@@ -54,13 +101,25 @@ class RubberDuck extends Duck implements Quackable {
     }
 }
 
-class WoodenDuck extends Duck implements Flyable {
-    @Override
-    public void fly() {
-        System.out.println("Terbang seperti mainan");
+class WoodenDuck extends Duck {
+    public WoodenDuck() {
+        quackBehavior = new Quack();
+        flyBehavior = new FlyNoWay();
     }
     @Override
     void display() {
         System.out.println("Tampilan WoodenDuck");
+    }
+}
+
+class ModelDuck extends Duck {
+    ModelDuck() {
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new Quack();
+    }
+
+    @Override
+    void display() {
+        System.out.println("Tampilan ModelDuck");
     }
 }
