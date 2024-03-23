@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="095edf4f-a061-478c-8884-3080a111806f" name="Changes" comment="Duck tahap 3 menggunakan interface dan mulai menggunakan strategy pattern">
-      <change afterPath="$PROJECT_DIR$/Analisa.md" afterDir="false" />
+    <list default="true" id="095edf4f-a061-478c-8884-3080a111806f" name="Changes" comment="Menambahkan Gambar ScreenShoot Code dan hasil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Tugas Strategi Pattern (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/Image/Tugas Strategi Pattern (1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Tugas Strategi Pattern (2).png" beforeDir="false" afterPath="$PROJECT_DIR$/Image/Tugas Strategi Pattern (2).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Tugas Strategi Pattern (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Tugas Strategi Pattern (4).png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
@@ -31,7 +34,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -94,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710988433291</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Menambahkan Gambar ScreenShoot Code dan hasil">
+      <option name="closed" value="true" />
+      <created>1711189173936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711189173936</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +135,7 @@
     <MESSAGE value="Duck tahap 1 tanpa hanya menggunakan inheretence" />
     <MESSAGE value="Duck tahap 2 tanpa hanya menggunakan interface" />
     <MESSAGE value="Duck tahap 3 menggunakan interface dan mulai menggunakan strategy pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Duck tahap 3 menggunakan interface dan mulai menggunakan strategy pattern" />
+    <MESSAGE value="Menambahkan Gambar ScreenShoot Code dan hasil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan Gambar ScreenShoot Code dan hasil" />
   </component>
 </project>

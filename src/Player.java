@@ -1,62 +1,48 @@
-//public class Player{
-//    public void pushTrianlge(String mode){
-//        if(mode.equals("sword")){
-//            System.out.println("punch with sword");
-//        }
-//        if(mode.equals("uppercut")){
-//            System.out.println("do uppercut punch");
-//        }
-//    }
-//    public void pushCross(String mode){
-//        if(mode.equals("flying kick")){
-//            System.out.println("do flying kick to opponent");
-//        }
-//        if(mode.equals("lower kick")){
-//            System.out.println("do low kick to opponent's leg");
-//        }
-//    }
-//}
+interface Punch {
+    void punchAction();
+}
 
-public class Player{
-    public void pushTrianlge(Punch punch){
+interface Kick {
+    void kickAction();
+}
+
+public class Player {
+    Punch punch;
+    Kick kick;
+
+    public void pushTriangle() {
         punch.punchAction();
     }
-    public void pushCross(Kick kick){
+
+    public void pushCross() {
         kick.kickAction();
     }
 }
 
-interface Punch{
-    void punchAction();
-}
-
-class SwordPunch implements Punch{
+class SwordPunch implements Punch {
     @Override
-    public void punchAction(){
+    public void punchAction() {
         System.out.println("Slash With Sword");
     }
 }
 
-class UppercutPunch implements Punch{
+class UppercutPunch implements Punch {
     @Override
-    public void punchAction(){
+    public void punchAction() {
         System.out.println("Do Uppercut Punch");
     }
 }
 
-interface Kick{
-    void kickAction();
-}
-
-class FlyingKick implements Kick{
+class FlyingKick implements Kick {
     @Override
-    public void kickAction(){
+    public void kickAction() {
         System.out.println("Do Flying Kick to Opponent");
     }
 }
-class LowerKick implements Kick{
+
+class LowerKick implements Kick {
     @Override
-    public void kickAction(){
+    public void kickAction() {
         System.out.println("do low kick to opponent's leg");
     }
 }

@@ -5,21 +5,47 @@ public class Main {
 
         System.out.println("Serangan Player 1 : ");
         Player yoshimitsu = new Player();
-        yoshimitsu.pushCross(new FlyingKick());
-        yoshimitsu.pushTrianlge(new SwordPunch());
+        yoshimitsu.kick = new FlyingKick();
+        yoshimitsu.punch = new SwordPunch();
+        yoshimitsu.pushCross();
+        yoshimitsu.pushTriangle();
+
         System.out.println("\nSerangan Player 2 : ");
         Player Akatsuki = new Player();
-        Akatsuki.pushCross(new LowerKick());
-        Akatsuki.pushTrianlge(new UppercutPunch());
+        Akatsuki.kick = new LowerKick();
+        Akatsuki.punch = new UppercutPunch();
+        Akatsuki.pushCross();
+        Akatsuki.pushTriangle();
 
         System.out.println("\nJenis Jenis Bebek : ");
+        System.out.println("\nBebek 1 : ");
         Duck mallard = new MallardDuck();
         mallard.performQuack();
         mallard.performFly();
         mallard.swim();
         mallard.display();
 
-        System.out.println("\nBebek 2 : ");
+        System.out.println("\nBebek 2 :");
+        Duck Read = new RedHeadDuck();
+        Read.display();
+        Read.performQuack();
+        Read.swim();
+        Read.performFly();
+
+        System.out.println("\nBebek 3 :");
+        Duck Wodden = new WoodenDuck();
+        Wodden.display();
+        Wodden.swim();
+        Wodden.performFly();
+        Wodden.performQuack();
+
+        System.out.println("\nBebek 4 :");
+        Duck Ber = new RubberDuck();
+        Ber.display();
+        Ber.swim();
+        Ber.performQuack();
+
+        System.out.println("\nBebek Mainan : ");
         Duck modelduck = new ModelDuck();
         modelduck.performFly(); // Akan memanggil contructor modelduck(FlyNoway)
         modelduck.setFlyBehavior((new FlyWithRocketPower()));
