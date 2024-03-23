@@ -33,14 +33,14 @@ interface Punch{
 class SwordPunch implements Punch{
     @Override
     public void punchAction(){
-        System.out.println("punch with sword");
+        System.out.println("Slash With Sword");
     }
 }
 
 class UppercutPunch implements Punch{
     @Override
     public void punchAction(){
-        System.out.println("do uppercut punch");
+        System.out.println("Do Uppercut Punch");
     }
 }
 
@@ -51,7 +51,7 @@ interface Kick{
 class FlyingKick implements Kick{
     @Override
     public void kickAction(){
-        System.out.println("do flying kick to opponent");
+        System.out.println("Do Flying Kick to Opponent");
     }
 }
 class LowerKick implements Kick{
